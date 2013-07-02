@@ -31,10 +31,10 @@ module OmniAuth
         super
       end
       
-      def auth_hash
-        OmniAuth::Utils.deep_merge(super, client_params.merge({
-          :grant_type => 'authorization_code'}))
-      end
+      # def auth_hash
+      #   OmniAuth::Utils.deep_merge(super, client_params.merge({
+      #     :grant_type => 'authorization_code'}))
+      # end
       
       def raw_info
         access_token.options[:mode] = :query
